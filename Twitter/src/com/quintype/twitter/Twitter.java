@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 	 public void setUp() throws IOException
 	 {
   		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/libs/chromedriver");
-	    driver=new ChromeDriver();
+	        driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	 }
@@ -38,15 +38,15 @@ import org.testng.annotations.Test;
 			String username = properties.getProperty("usernamedata");
 			String password = properties.getProperty("passworddata");
 			String login = properties.getProperty("login");
-		    String searchbar = properties.getProperty("searchbar");
-		    String searchData = properties.getProperty("data");
-		    String potus = properties.getProperty("potusHref");
-		    String follow = properties.getProperty("follow");
-		    following = properties.getProperty("following");
-		    signoutlogo = properties.getProperty("signoutlogo");
-		    logout = properties.getProperty("logout");
+		        String searchbar = properties.getProperty("searchbar");
+		        String searchData = properties.getProperty("data");
+		        String potus = properties.getProperty("potusHref");
+		        String follow = properties.getProperty("follow");
+		        following = properties.getProperty("following");
+		        signoutlogo = properties.getProperty("signoutlogo");
+		        logout = properties.getProperty("logout");
 		    
-		    driver.get(url);
+		        driver.get(url);
 			driver.findElement(By.partialLinkText(signIn)).click();
 			driver.findElement(By.xpath(usernamelocation)).sendKeys(username);
 			driver.findElement(By.xpath(passwordlocation)).sendKeys(password);
